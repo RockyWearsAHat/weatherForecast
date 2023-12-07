@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Quicksand";
+  font-weight: 400;
+}
+
+body {
+  max-width: 100%;
+  max-height: 100%;
+  height: 100vh;
+  width: 100vw;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  overflow: hidden !important;
+}
+
+#backgroundImage {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(5px);
+  transform: scale(1.1);
+}
+
+#backgroundImageWrapper {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#resultsWrap {
+  display: flex;
+  position: absolute;
+  margin-top: calc(min(200px));
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  color: white;
+}
+
+#inputsWrap {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+#weatherPreviewIcon {
+  margin-block: -40px;
+}
+
+#weatherPreviewIcon.whiteIcon {
+  filter: brightness(0) invert(1);
+}
+
+#resultsWrap > *:not(img) {
+  text-transform: uppercase;
+  text-shadow: 0 0 6px rgb(31, 49, 64);
+}
+
+#fiveDayForecastList {
+  margin-top: 50px;
+  display: flex;
+  list-style: none;
+  gap: 100px;
+}
+
+#fiveDayForecastList > li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 300px;
+}
+
+#fiveDayForecastList > li > h3 {
+  text-align: center;
+  margin-top: -20px;
+}
+
+#recentlySearchedWrapper {
+  width: 310px;
+  height: 100vh;
+  position: absolute;
+  left: -10px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+#recentlySearchedWrapper::before {
+  width: 100%;
+  height: 100%;
+  content: "";
+  background-color: rgba(82, 90, 161, 0.435);
+  filter: blur(3px);
+  transform: scale(1.1);
+}
+
+#inputsWrap {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#recentlySearchedWrapper > div > input {
+  font-size: 20px;
+  text-align: center;
+  width: 200px;
+  height: 30px;
+  background-color: transparent;
+  color: white;
+  box-shadow: none;
+  border: none;
+}
+
+#recentlySearchedWrapper > div > input::placeholder {
+  color: white;
+}
+
+#recentlySearchedWrapper > div > input:focus::placeholder {
+  color: transparent;
+}
+
+#recentlySearchedWrapper > div > input:focus {
+  outline: none;
+}
+
+#recentlySearchedWrapper > div > button {
+  width: 200px;
+  border-radius: 30px;
+  background-color: rgb(31, 49, 64);
+  border: none;
+  outline: none;
+  color: white;
+  padding-block: 10px;
+}
+
+#recentlySearched {
+  position: absolute;
+  top: 100px;
+  list-style: none;
+  max-height: calc(100vh - 200px);
+  overflow-y: auto;
+  width: fit-content;
+}
+
+#recentlySearched > li {
+  color: white;
+  text-align: center;
+  height: 20px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: rgb(31, 49, 64);
+}
+
+@media screen and (max-width: 1800px) {
+  #fiveDayForecastList {
+    gap: 50px;
+  }
+}
+
+@media screen and (max-width: 1560px) {
+  #fiveDayForecastList {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  #recentlySearchedWrapper {
+    border-radius: 20px 20px 0px 0px;
+    width: 60vh;
+    max-height: 300px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: calc(100vh - 300px);
+  }
+
+  #recentlySearched {
+    top: 100px;
+    list-style: none;
+    max-height: calc(300px - 200px);
+    overflow-y: auto;
+    width: fit-content;
+  }
+}

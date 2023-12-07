@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="#" />
+  </head>
+  <body>
+    <div id="backgroundImageWrapper">
+      <div id="backgroundImage"></div>
+    </div>
+
+    <div id="resultsWrap">
+      <h1 id="currentLocaleTitle"></h1>
+      <h3 id="dateWrapper"></h3>
+      <h1 id="currentLocaleDescriptionForecast"></h1>
+      <img
+        id="weatherPreviewIcon"
+        src="https://openweathermap.org/img/wn/01d@4x.png"
+        alt="Weather Icon"
+      />
+      <h1 id="currentLocaleTemperature"></h1>
+      <h3 id="currentLocaleLowHigh">
+        <span id="low"></span>
+        <span id="high"></span>
+      </h3>
+      <h3 id="currentWindSpeedEl">Wind: <span id="currentWindSpeed"></span></h3>
+      <h3 id="currentHumidityEl">
+        Humidity: <span id="currentHumidity"></span>
+      </h3>
+      <ul id="fiveDayForecastList"></ul>
+    </div>
+
+    <div id="recentlySearchedWrapper">
+      <div id="inputsWrap">
+        <input
+          type="text"
+          id="locationInput"
+          placeholder="Get The Weather At..."
+        />
+        <button type="submit" id="searchLocation">Get Forecast</button>
+      </div>
+      <ul id="recentlySearched"></ul>
+    </div>
+  </body>
+</html>
+
+<script src="./script.js"></script>
