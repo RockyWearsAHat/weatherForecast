@@ -145,6 +145,12 @@ body {
   outline: none;
   color: white;
   padding-block: 10px;
+  transition: 0.2s all ease-in-out;
+}
+
+#recentlySearchedWrapper > div > button:hover {
+  cursor: pointer;
+  background-color: rgb(25, 38, 48);
 }
 
 #recentlySearched {
