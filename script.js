@@ -158,7 +158,7 @@ const getWeatherAtLocation = async (location, writeToSessionStore = false) => {
   let geo;
   try {
     geo = await fetch(
-      `http://api.openweathermap.org/geo/1.0/direct?q=${locString}&limit=1&APPID=${weatherAPIAccessToken}`
+      `https://api.openweathermap.org/geo/1.0/direct?q=${locString}&limit=1&APPID=${weatherAPIAccessToken}`
     );
   } catch (err) {
     console.log(err);
@@ -232,7 +232,7 @@ const getWeatherAtLocation = async (location, writeToSessionStore = false) => {
   let revGeo;
   try {
     revGeo = await fetch(
-      `http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&APPID=${weatherAPIAccessToken}`
+      `https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=1&APPID=${weatherAPIAccessToken}`
     );
   } catch (err) {
     console.log(err);

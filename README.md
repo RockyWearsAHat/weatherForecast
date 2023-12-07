@@ -1,0 +1,5 @@
+# <a href="https://rockywearsahat.github.io/weatherForecast/index.html">Live Link To The Site</a>
+
+# This is a simple weather dashboard,
+
+It takes a search term and sends the location the reverse geocoding portion of the weather api then to the actual weather API to generate a 5 day forecast of whatever location is entered. The program will also do it's best to generate background images of the location your looking for through key term search with the unsplash API. There is no input checking which I know is a big no no, but for this I think it's ok, errors can come up if an invalid location is typed but even if a location is misspelled the geocoding api seems mildly resiliant and able to fix slight mistakes, just there is no checking for if the string is anywhere close to a country name, and if that is the case errors will get tossed but not handled in any way on the client side. I think for this project it's ok, this site ticks the boxes outlined on the challenge page, but if this was going live to production I'd put some more time into figuring out how to ensure no errors seep through and the user always gets some sort of valid response to their input.
