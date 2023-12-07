@@ -166,6 +166,10 @@ body {
   background-color: rgb(31, 49, 64);
 }
 
+#recentlySearched > li:hover {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1800px) {
   #fiveDayForecastList {
     gap: 50px;
